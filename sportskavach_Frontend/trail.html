@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Partners</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card3-slider {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      margin: auto;
+    }
+    .card3-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      will-change: transform;
+    }
+    .card3 {
+      min-width: 20%;
+      box-sizing: border-box;
+      padding: 15px;
+      transition: transform 0.3s;
+      position: relative;
+      border:none;
+    }
+    .card3 img {
+      max-width:700px;
+      max-height: 100px;
+      margin: auto;
+      display: block;
+    }
+    .card3:hover {
+      transform: translateY(-10px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <p class="font-weight-bold  text-center mt-4 mb-3" style="font-size: 2rem;">Trusted By Over +334567 Happy Customers Including</p>
+    <div class="card3-slider mt-4">
+      <div class="card3-container">
+        <div class="card3">
+          <img src="https://banner2.cleanpng.com/20180527/hg/kisspng-apollo-hospitals-apollo-hospital-indraprastha-apo-5b0a4754f0eff5.3144440915274002769869.jpg" alt="Batra Hospital">
+        </div>
+        <div class="card3">
+          <img src="https://logos-world.net/wp-content/uploads/2022/07/Fortis-Emblem-700x394.png" alt="Fortis">
+        </div>
+        <div class="card3">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.PfWxhO1QktnHlJC8dPLIiQHaDJ&pid=Api&P=0&h=220" alt="Apollo Hospital">
+        </div>
+        <div class="card3">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.gelUyB9vNfswwKFPeoVGCAHaEH&pid=Api&P=0&h=220" alt="Wockhardt Hospital">
+        </div>
+        <!-- Repeat the cards to create an ongoing slide effect -->
+        <div class="card3">
+          <img src="https://banner2.cleanpng.com/20180527/hg/kisspng-apollo-hospitals-apollo-hospital-indraprastha-apo-5b0a4754f0eff5.3144440915274002769869.jpg" alt="Batra Hospital">
+        </div>
+        <div class="card3">
+          <img src="https://logos-world.net/wp-content/uploads/2022/07/Fortis-Emblem-700x394.png" alt="Fortis">
+        </div>
+        <div class="card3">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.PfWxhO1QktnHlJC8dPLIiQHaDJ&pid=Api&P=0&h=220" alt="Apollo Hospital">
+        </div>
+
+        <div class="card3">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.gelUyB9vNfswwKFPeoVGCAHaEH&pid=Api&P=0&h=220" alt="Wockhardt Hospital">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script>
+    let currentIndex = 0;
+    const cardContainer = document.querySelector('.card3-container');
+    const cards = document.querySelectorAll('.card3');
+    const cardCount = cards.length;
+    const visibleCards = 5;
+
+    function slideNext() {
+      currentIndex++;
+      updateSlider();
+      if (currentIndex >= cardCount / 2) {
+        resetSlider();
+      }
+    }
+
+    function updateSlider() {
+      const slideWidth = cards[0].clientWidth;
+      cardContainer.style.transition = 'transform 0.5s ease-in-out';
+      cardContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
+    function resetSlider() {
+      setTimeout(() => {
+        currentIndex = 0;
+        cardContainer.style.transition = 'none';
+        cardContainer.style.transform = 'translateX(0)';
+      }, 500);
+    }
+
+    // Auto slide functionality
+    setInterval(slideNext, 2000); // Change slide every 2 seconds
+    </script>
+</body>
+</html>

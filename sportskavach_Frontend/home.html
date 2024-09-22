@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Payment Form</title> 
+    <link rel="icon" type="image/x-icon" href="./images/sportslogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: url('https://online.visual-paradigm.com/repository/images/b483aea0-fbbc-4574-9dcb-4a5899ba20a0/youtube-channel-arts-design/sport-youtube-channel-art.png') center no-repeat;
+            background-size: cover;
+            color: #333;
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            border-radius: 0.5em;
+            box-shadow: 0 0 1em 0 rgba(51, 51, 51, 0.25);
+            max-width: 580px;
+            margin: 20px auto;
+            overflow: hidden;
+            padding: 2em;
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .container h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .icon-container {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .icon-container i {
+            margin: 0 5px;
+        }
+
+        label {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        input[type=text] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 1em;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        input[type=text]:focus {
+            outline: none;
+            border-color: #27ae60;
+        }
+
+        .btn {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1em;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #219653;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h3>Payment Details</h3>
+    </header>
+    <form method="post" action="/pay">
+        <section>
+            <label for="price">Total Amount</label>
+            <input type="text" id="price" name="price" value="10" aria-label="Total Amount">
+        </section>
+        <section>
+            <label for="currency">Currency</label>
+            <input type="text" id="currency" name="currency" placeholder="Enter Currency" aria-label="Currency">
+        </section>
+        <section>
+            <label for="method">Payment Method</label>
+            <input type="text" id="method" name="method" placeholder="Payment Method" aria-label="Payment Method">
+        </section>
+        <section>
+            <label for="intent">Intent</label>
+            <input type="text" id="intent" name="intent" value="sale" aria-label="Intent">
+        </section>
+        <section>
+            <label for="description">Payment Description</label>
+            <input type="text" id="description" name="description" placeholder="Payment Description" aria-label="Payment Description">
+        </section>
+        <input type="submit" value="Continue to checkout" class="btn">
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Failure</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8d7da; /* Light red background for failure */
+            color: #721c24; /* Darker red for text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background-color: #ffffff;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #dc3545; /* Red color for failure */
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #495057;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #6c757d; /* Gray for neutral action */
+            padding: 12px 25px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        a:hover {
+            background-color: #5a6268;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Failure</h1>
+        <p>Unfortunately, your payment could not be processed. Please try again.</p>
+        <a href="home.html">Go to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportsKavach Login Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .rounded-t-5 {
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+        @media (min-width: 992px) {
+            .rounded-tr-lg-0 {
+                border-top-right-radius: 0;
+            }
+            .rounded-bl-lg-5 {
+                border-bottom-left-radius: 0.5rem;
+            }
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: #02acac;
+        }
+        .full-height {
+            height: 100%;
+        }
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .card {
+            max-width: 900px;
+            width: 100%;
+            opacity: 0;
+            animation: fadeInAnimation 1s ease-in forwards;
+        }
+        .image-wrapper {
+            padding: 15px;
+            opacity: 0;
+            animation: fadeInImage 1s ease-in forwards;
+        }
+        @keyframes fadeInAnimation {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInImage {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .image-wrapper img {
+            border-radius: 0.5rem 0 0 0.5rem;
+            width: 100%;
+        }
+        .input-group .form-control {
+            border-left: 0;
+        }
+        .input-group-text {
+            border-right: 0;
+        }
+        @media (max-width: 991px) {
+        .image-wrapper {
+            padding: 15px;
+            opacity: 0;
+            animation: fadeInImage 1s ease-in forwards;
+            max-height: 60vh; /* Adjust the max-height as per your design */
+            overflow: hidden;
+        }
+
+        .image-wrapper img {
+           
+            border-radius: 0.5rem 0 0 0.5rem;
+            width: 100%;
+            height: auto;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Uppermost Navbar -->
+    <div class="row">
+      <div id="uppernavbar" class="w-100 d-flex flex-wrap align-items-center">
+        <div class="col-12 col-sm-3 text-center text-sm-left py-2">
+          <span>
+            <a href="https://www.facebook.com/" target="_blank">
+              <i class="fab fa-facebook iconsfb"></i>  
+            </a>
+          </span>
+          <span>
+            <a href="https://www.linkedin.com/" target="_blank">
+              <i class="fab fa-linkedin iconsfb"></i>
+            </a>
+          </span>
+          <span>
+            <a href="https://twitter.com/" target="_blank">
+              <i class="fab fa-twitter iconsfb"></i>
+            </a>
+          </span>
+          <span>
+            <a href="https://www.google.com/" target="_blank">
+              <i class="fab fa-google-plus-square iconsfb"></i>
+            </a>
+          </span>
+        </div>
+        <div class="col-12 col-sm-9 d-flex flex-wrap justify-content-center justify-content-sm-end text-center text-sm-left py-2">
+          <span class="me-3">
+            <i class="fas fa-phone-volume iconsfb"></i>
+            <a href="tel:+918081182885" class="fs-6 contactInfo">+91 8081182885</a>
+          </span>
+          <span>
+            <i class="fas fa-envelope iconsfb"></i>
+            <a href="mailto:info@sportskavach.com" class="fs-6 contactInfo">info@sportskavach.com</a>
+          </span>
+        </div>
+      </div> 
+     </div>
+    <!-- 2nd Navbar  -->
+     <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" class="text-white">
+          <img src="./images/logosports1.png" alt="Logo" class="logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- <span class="navbar-toggler-icon"></span>/ -->
+          <i class="fas fa-stream manueIcon" id="manuIcon"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./patner.html">Partner With Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./earn.html">Earn With Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./faqs.html">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <div class="navbar-nav ml-auto">
+            <button class="btn btn-success" style="background-color: #009c9d; border-color: #009c9d;">
+              <a href="./subscription.html" class="footerchild">Subscribe Now</a>
+            </button>
+          </div>
+          
+        </div>
+      </nav>
+     </div>
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start centered-container mt-5 mt-lg-0">
+    <div class="card mb-4">
+        <div class="row g-0 d-flex align-items-center">
+            <div class="col-12 col-lg-7">
+                <div class="image-wrapper w-100">
+                    <img src="./images/login.jpg" alt="Trendy Pants and Shoes"
+                         class="rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+                </div>
+            </div>
+            <div class="col-12 col-lg-5">
+                <div class="card-body py-5 px-md-5">
+                    <form id="loginForm">
+                        <!-- Email input -->
+                        <div class="input-group mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
+                            </div>
+                            <input type="email" class="form-control" id="email" placeholder="Email address" aria-label="Email" aria-describedby="basic-addon1" required>
+                        </div>
+                        <!-- Password input -->
+                        <div class="input-group mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon2"><i class="bi bi-lock"></i></span>
+                            </div>
+                            <input type="password" class="form-control" id="password" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2" required>
+                        </div>
+                        <!-- 2 column grid layout for inline styling -->
+                        <div class="row mb-4">
+                            <div class="col d-flex justify-content-center">
+                                <!-- Checkbox -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                                    <label class="form-check-label" for="form2Example31"> Remember me </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+                        <!-- Sign up link -->
+                        <div class="text-center">
+                            <p>Don't have an account? <a href="./signup.html"><b>Sign Up</b></a></p>
+                        </div>
+                        <div class="col">
+                          <!-- Simple link -->
+                          <a href="./forgot.html">Forgot password?</a>
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section: Design Block -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const loginData = {
+                useremail: email,
+                userpassword: password
+            };
+
+            try {
+                const response = await fetch('http://localhost:8080/api/v1/user/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(loginData)
+                });
+
+                if (response.ok) {
+                    alert("You are logged in successfully!");
+                    window.location.href = './buy.html';
+                } else if (response.status === 401) {
+                    alert("Please enter correct credentials.");
+                } else {
+                    const errorData = await response.json();
+                    alert("Error: " + (errorData.message || "An error occurred while logging in."));
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("An error occurred while logging in.");
+            }
+        });
+
+    var menuIcon = document.getElementById('manuIcon');
+  
+    menuIcon.addEventListener('click', function() {
+      // Toggle between the menu icon and the cross icon
+      if (menuIcon.classList.contains('fa-stream')) {
+        menuIcon.classList.remove('fa-stream');
+        menuIcon.classList.add('fa-times');
+      } else {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-stream');
+      }
+    });
+</script>
+</body>
+</html>

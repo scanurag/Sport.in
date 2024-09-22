@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SportsKavach Home Page</title> 
+    <link rel="icon" type="image/x-icon" href="./images/sportslogo.png">
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .company-info {
+          padding: 3rem 1rem;
+          background-color: #f8f9fa;
+      }
+      .company-image {
+          max-width: 100%;
+          height: auto;
+      }
+      .company-details {
+          font-size: 1.2rem;
+          line-height: 1.6;
+      }
+      .check-list {
+          margin-top: 1.5rem;
+          list-style-type: none;
+          padding-left: 0;
+      }
+      .check-list li {
+          padding-bottom: 1rem;
+          position: relative;
+      }
+      .check-list li::before {
+          content: "\2713"; /* Unicode character for checkmark */
+          color: rgb(68, 157, 97);
+          font-size: 1.2rem;
+          font-weight: bold;
+          position: absolute;
+          left: -1.5rem; /* Adjust as needed */
+          top: 0.3rem; /* Adjust as needed */
+      }
+      .btn-primary {
+          background-color: rgb(9, 153, 124);
+          border-color: rgb(9, 153, 124);
+      }
+      .btn-primary:hover {
+          background-color: #02acac;
+          border-color: #02acac;
+      }
+
+      .card-slider {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      margin: auto;
+    }
+    .card-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .card {
+      min-width: 33.33%;
+      box-sizing: border-box;
+      padding: 15px;
+      transition: transform 0.3s;
+      position: relative;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background-color: #02acac;
+      transition: height 0.9s;
+      z-index: 0;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .card:hover::before {
+      height: 100%;
+    }
+    .card-body {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+    }
+    .card-icon {
+      width: 60px;
+      height: 60px;
+      margin-right: 15px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-title {
+      margin: 0;
+      transition: color 0.3s;
+    }
+    .card:hover .card-title {
+      color: white;
+    }
+    .card p {
+      color: black; /* Ensure paragraph text remains black */
+      transition: color 0.3s;
+      z-index: 1;
+      position: relative;
+    }
+    .card:hover p {
+      color:white; /* Prevent color change on hover */
+    }
+
+    .slider-nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .slider-nav button {
+      margin: 0 10px;
+      padding: 10px 20px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+      .card {
+        min-width: 50%;
+      }
+    }
+    @media (max-width: 768px) {
+      .card {
+        min-width: 100%;
+      }
+    }
+
+    .card2 {
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            padding: 1rem 1.5rem 1.5rem 3.5rem; /* Ensure enough space for the number circle */
+        }
+        .card2:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .check-mark {
+            color: olive;
+            margin-right: 0.5rem;
+        }
+
+        .card3-slider {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      margin: auto;
+    }
+    .card3-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      will-change: transform;
+    }
+    .card3 {
+      min-width: 20%;
+      box-sizing: border-box;
+      padding: 15px;
+      transition: transform 0.3s;
+      position: relative;
+      border:none;
+    }
+    .card3 img {
+      max-width:700px;
+      max-height: 100px;
+      margin: auto;
+      display: block;
+    }
+    .card3:hover {
+      transform: translateY(-10px);
+    }
+  </style>
+
+  </head>
+  <body>
+    <!-- Uppermost Navbar -->
+     <div class="row">
+      <div id="uppernavbar" class="w-100 d-flex flex-wrap align-items-center">
+        <div class="col-12 col-sm-3 text-center text-sm-left py-2">
+          <span>
+            <a href="https://www.facebook.com/" target="_blank">
+              <i class="fab fa-facebook iconsfb"></i>  
+            </a>
+          </span>
+          <span>
+            <a href="https://www.linkedin.com/company/sportkavach/" target="_blank">
+              <i class="fab fa-linkedin iconsfb"></i>
+            </a>
+          </span>
+          <span>
+            <a href="https://twitter.com/" target="_blank">
+              <i class="fab fa-twitter iconsfb"></i>
+            </a>
+          </span>
+          <span>
+            <a href="https://www.google.com/" target="_blank">
+              <i class="fab fa-google-plus-square iconsfb"></i>
+            </a>
+          </span>
+        </div>
+        <div class="col-12 col-sm-9 d-flex flex-wrap justify-content-center justify-content-sm-end text-center text-sm-left py-2">
+          <span class="me-3">
+            <i class="fas fa-phone-volume iconsfb"></i>
+            <a href="tel:+918081182885" class="fs-6 contactInfo">+91 8081182885</a>
+          </span>
+          <span>
+            <i class="fas fa-envelope iconsfb"></i>
+            <a href="mailto:info@SportsKavach.com" class="fs-6 contactInfo">info@SportsKavach.com</a>
+          </span>
+        </div>
+      </div> 
+     </div>
+    <!-- 2nd Navbar  -->
+      <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" class="text-white">
+          <img src="./images/logosports1.png" alt="Logo" class="logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- <span class="navbar-toggler-icon"></span>/ -->
+          <i class="fas fa-stream manueIcon" id="manuIcon"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./patner.html">Partner With Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./earn.html">Earn With Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./faqs.html">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <div class="navbar-nav ml-auto">
+            <button class="btn btn-success" style="background-color: #009c9d; border-color: #009c9d;">
+              <a href="./subscription.html" class="footerchild">Subscribe Now</a>
+            </button>
+          </div>
+          
+        </div>
+      </nav>
+      </div>
+       <!-- main banner -->
+       <div class="container-fluid main-banner">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                <h1 class=" font-weight-bold text-center" style="color:#f76031;" >Health Plans</h1>
+                <p class="font-weight-bold d-none d-sm-block text-white mt-4 text-center" style="font-size: 4rem;">Trusted Plans For Any Purpose</p> 
+                <p class="font-weight-bold d-block d-sm-none text-white mt-4 text-center" style="font-size: 3rem;">Trusted Plans For Any Purpose</p> 
+                <h1 class="font-weight-bold text-white text-center" style="font-size: 1rem;">India's Premier Healthcare Plans for a Billion Indians Unlock Your Gateway to Comprehensive Healthcare with SportsKavach</h1>
+
+                <button class="btn btn-success mt-4" style="background-color: #f76031; border-color: #f76031;">
+                  <a href="/subscription.html" class="footerchild font-weight-bold">Subscribe Now</a>
+                </button>
+
+            </div>
+            <div class="col-lg-6 mt-4 mb-4 d-flex justify-content-center">
+                <img src="./images/banner/banner-three-main.webp" alt="">
+            </div>
+        </div>
+       </div>
+    
+      <!-- Our Features  -->
+       <div class="container-fluid">
+      <h4 style="color: #f76031;" class="text-center mt-3  ">Our Features</h4>
+      <div class="container-fluid">
+        <span class="font-weight-bold d-none d-sm-block text-center" style="font-size: 3rem;">We Are Award Winning Company</span> 
+        <span class="font-weight-bold d-block d-sm-none text-center" style="font-size: 1rem;">We Are Award Winning Company</span> 
+        </div>
+      <div class="container-fluid">
+        <div class="row mt-5 mb-3 mx-auto mx-sm-0">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card1 mt-2 mb-2" style="width: 20rem;">
+              <img src="./images/features/features-icon-1.svg" class="card-img-top img-fluid ml-3" alt="..." style="max-width: 30%; height: auto;">
+              <div class="card1-body">
+                <h5 class="card1-title">Trustworthy Company</h5>
+                <p class="card1-text">Cashless OPD Consultations across 10,600+ hospitals</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card1 mt-2 mb-2" style="width: 20rem;">
+              <img src="./images/features/features-icon-2.svg" class="card-img-top img-fluid " alt="..." style="max-width: 30%; height: auto;">
+              <div class="card1-body">
+                <h5 class="card1-title">Money Back Guarantee</h5>
+                <p class="card1-text">No-cost loans up to ₹5,00,000* for hospitalization</p>
+              </div>
+            </div>            
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card1 mt-2 mb-2" style="width: 20rem;">
+              <img src="./images/features/features-icon-3.svg" class="card-img-top img-fluid ml-3" alt="..." style="max-width: 30%; height: auto;">
+              <div class="card1-body">
+                <h5 class="card1-title">Awesome Support</h5>
+                <p class="card1-text">Free full body health, diet, eye and mental health checkups</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card1 mt-2 mb-2" style="width: 20rem;">
+              <img src="./images/features/features-icon-4.svg" class="card-img-top img-fluid ml-3" alt="..." style="max-width: 30%; height: auto;">
+              <div class="card1-body">
+                <h5 class="card1-title">Anytime Cancellation</h5>
+                <p class="card1-text">7 day personalized on-call support available</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       </div>
+
+       <!-- About Us  -->
+      <div class="container-fluid company-info bg-white">
+        <h2 style="color: #f76031;" class="text-center mb-4">About Us</h2>
+        <div class="row">
+            <div class="col-lg-6 d-flex justify-content-center align-items-center mt-2">
+                <img src="./images/insurance 4.png" alt="Company Image"  class="img-fluid w-200" style="height: 500px;">
+            </div>
+            <div class="col-lg-6">  
+      <span class="font-weight-bold d-none d-sm-block mt-2" style="font-size: 3rem;">India's Best Sports Kavach Plans Company</span> 
+     <span class="font-weight-bold d-block d-sm-none  mt-2" style="font-size: 1rem;">India's Best Sports Kavach Plans Company</span>
+                <p class="company-details ">
+                    SportsKavach is a subscription-based healthcare Plans launched by SportsKavach, a Delhi-based healthcare company. Members will get free OPDs, free full body health check-up, discounts on medicines, and pre-approved loans up to 15 lakhs.
+                </p>
+                <ul class="check-list ml-2">
+                    <li>Check Pine & Associates Plans</li>
+                    <li>Check Amount of Payment</li>
+                    <li>Check Payment at Contingency</li>
+                    <li>We Can Save You Money</li>
+                </ul>
+                <a href="#" class="btn btn-primary mt-3">Learn More</a>
+            </div>
+        </div>
+      </div>
+
+       <!-- Our Services -->
+       <div class="container-fluid">
+          <h4 style="color: #f76031;" class="text-center mt-3">Our Services</h4>
+         <div class="container-fluid">
+        <span class="font-weight-bold d-none d-sm-block text-center" style="font-size: 3rem;">SportsKavach Best Plans Services</span> 
+        <span class="font-weight-bold d-block d-sm-none text-center" style="font-size: 1rem;">SportsKavach Best Plans Services</span>
+       </div>
+       <div class="container my-5">
+        <div class="card-slider">
+          <div class="card-container">
+            <!-- First Row of Cards -->
+            <div class="card">
+              <div class="card-body">
+                <div class="card-icon">
+                  <img src="./images/services/couple.svg" alt="Card Icon">
+                </div>
+                <h5 class="card-title">Family Health Plans</h5>
+              </div>
+              <p>Comprehensive coverage for the whole family with benefits worth Rs.1,00,000 including coverage for consumables and extra charge at 10000+ Hospitals.</p>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="card-icon">
+                  <img src="./images/services/home.svg" alt="Card Icon">
+                </div>
+                <h5 class="card-title">Emergency Financial Aid</h5>
+              </div>
+              <p>Instant, no cost loan of upto 5,00,000 for hospitalization, ensuring financial support during emergencies with full assistance for Plans claims.</p>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="card-icon">
+                  <img src="./images/services/lightbulb.svg" alt="Card Icon">
+                </div>
+                <h5 class="card-title">Wellness and preventive care</h5>
+              </div>
+              <p>Extensive health coverage options saving upto 40% on pharmacy and diagnostic bills, includes free full body checkups.</p>
+            </div>
+            <!-- Second Row of Cards -->
+            <div class="card">
+              <div class="card-body">
+                <div class="card-icon">
+                  <img src="./images/services/heart.svg" alt="Card Icon">
+                </div>
+                <h5 class="card-title">Convenient health care services</h5>
+              </div>
+              <p>Priority scheduling for appointments and round-the-clock health support, allowing you to skip lines and receive personalized assistance for all your health queries.</p>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="card-icon">
+                  <img src="./images/services/car.svg" alt="Card Icon">
+                </div>
+                <h5 class="card-title">Extensive Health Coverage</h5>
+              </div>
+              <p>Comprehensive coverage for the whole family with benefits worth Rs.1,00,000 including coverage for consumables and extra charge at 10000+ Hospitals.</p>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="card-icon">
+                  <img src="./images/services/services-icon-1.svg" alt="Card Icon">
+                </div>
+                <h5 class="card-title">Personalized Assistance</h5>
+              </div>
+              <p>Comprehensive coverage for the whole family with benefits worth Rs.1,00,000 including coverage for consumables and extra charge at 10000+ Hospitals.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Previous and Next Buttons -->
+        <div class="slider-nav">
+          <button type="button" class="btn btn-primary" onclick="slidePrev()">Previous</button>
+          <button type="button" class="btn btn-primary" onclick="slideNext()">Next</button>
+        </div>
+      </div>
+
+       </div>
+
+
+       <!-- patner with us  -->
+      <!-- <div class="container my-5">
+        <p class="font-weight-bold  text-center mt-4 mb-3" style="font-size: 2rem;">Trusted By Over +334567 Happy Customers Including</p>
+        <div class="card3-slider mt-4">
+          <div class="card3-container">
+            <div class="card3">
+              <img src="https://banner2.cleanpng.com/20180527/hg/kisspng-apollo-hospitals-apollo-hospital-indraprastha-apo-5b0a4754f0eff5.3144440915274002769869.jpg" alt="Batra Hospital">
+            </div>
+            <div class="card3">
+              <img src="https://logos-world.net/wp-content/uploads/2022/07/Fortis-Emblem-700x394.png" alt="Fortis">
+            </div>
+            <div class="card3">
+              <img src="https://tse3.mm.bing.net/th?id=OIP.PfWxhO1QktnHlJC8dPLIiQHaDJ&pid=Api&P=0&h=220" alt="Apollo Hospital">
+            </div>
+            <div class="card3">
+              <img src="https://tse1.mm.bing.net/th?id=OIP.gelUyB9vNfswwKFPeoVGCAHaEH&pid=Api&P=0&h=220" alt="Wockhardt Hospital">
+            </div>
+            <div class="card3">
+              <img src="https://banner2.cleanpng.com/20180527/hg/kisspng-apollo-hospitals-apollo-hospital-indraprastha-apo-5b0a4754f0eff5.3144440915274002769869.jpg" alt="Batra Hospital">
+            </div>
+            <div class="card3">
+              <img src="https://logos-world.net/wp-content/uploads/2022/07/Fortis-Emblem-700x394.png" alt="Fortis">
+            </div>
+            <div class="card3">
+              <img src="https://tse3.mm.bing.net/th?id=OIP.PfWxhO1QktnHlJC8dPLIiQHaDJ&pid=Api&P=0&h=220" alt="Apollo Hospital">
+            </div>
+    
+            <div class="card3">
+              <img src="https://tse1.mm.bing.net/th?id=OIP.gelUyB9vNfswwKFPeoVGCAHaEH&pid=Api&P=0&h=220" alt="Wockhardt Hospital">
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+       <!-- Plans benefits -->
+       <div class="container-fluid company-info bg-white">
+        <div class="row">
+            <div class="col-lg-6 d-flex justify-content-center align-items-center mt-3">
+                <img src="./images/insurance-benefits.webp" alt="Health Plans Image" class="img-fluid">
+            </div>
+            <div class="col-lg-6">
+                <h1 style="color: #f76031;" class="text-center mt-3">Plans Benefits</h1>
+                <span class="font-weight-bold d-none d-sm-block text-center" style="font-size: 2.5rem;">We Inspire And Help Our Customers</span> 
+        <span class="font-weight-bold d-block d-sm-none text-center" style="font-size: 1rem;">We Inspire And Help Our Customers</span>
+        <p class="font-weight-bold text-center" style="font-size: 1rem;">Dislike men who are so beguiled and demoralized by the charms of pleasureent.</p>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card2 p-3">
+                            <p class="font-weight-bold">Comprehensive Coverage</p>
+                            <p><i class="check-mark">&#10003;</i>Benefits Worth Rs 1,00,000</p>
+                            <p><i class="check-mark">&#10003;</i>Includes consumables and extra charges</p>
+                            <p><i class="check-mark">&#10003;</i>Cashless OPD & Orthopedic Consultation across 10,000+ hospitals</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card2 p-3">
+                            <p class="font-weight-bold">No Cost Loans Upto Rs 5,00,000</p>
+                            <p><i class="check-mark">&#10003;</i>Financial Support For Hospitalization</p>
+                            <p><i class="check-mark">&#10003;</i>Full Support for Plans claim at partner hospital</p>
+                            <p><i class="check-mark">&#10003;</i>Assistance upto Rs 20,000 for hospitalization expenses</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card2 p-3">
+                            <p class="font-weight-bold">Priority Scheduling & Health Support</p>
+                            <p><i class="check-mark">&#10003;</i>Skip lines by booking appointments on call</p>
+                            <p><i class="check-mark">&#10003;</i>7 Days on call support available</p>
+                            <p><i class="check-mark">&#10003;</i>Personalized assistance for health queries</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card2 p-3">
+                            <p class="font-weight-bold">Extensive Health Coverage Options</p>
+                            <p><i class="check-mark">&#10003;</i>Save upto 40% on pharmacy and diagnostic bills</p>
+                            <p><i class="check-mark">&#10003;</i>Free full body health, diet, eye and mental health checkup</p>
+                            <p><i class="check-mark">&#10003;</i>Assistance for ambulance, IVF and home care booking</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+      </div>
+
+      
+
+      <!-- Footer section -->
+       <div class="row" id="footer">
+        <div class="col-lg-4 col-sm-6 mt-5 mb-5  text-center">
+           <img src="./images/footer-logo.png" class="" alt="">
+            <br>
+            <p class="footerchild">India's Premier
+              Healthcare Plans
+              for a Billion Indians
+              Unlock Your Gateway to Comprehensive Healthcare with SportsKavach</p>
+              <span>
+                <a href="https://www.facebook.com/" target="_blank">
+                  <i class="fab fa-facebook iconsfb"></i>  
+                </a>
+              </span>
+              <span>
+                <a href="https://www.linkedin.com/" target="_blank">
+                  <i class="fab fa-linkedin iconsfb"></i>
+                </a>
+              </span>
+              <span>
+                <a href="https://twitter.com/" target="_blank">
+                  <i class="fab fa-twitter iconsfb"></i>
+                </a>
+              </span>
+              <span>
+                <a href="https://www.google.com/" target="_blank">
+                  <i class="fab fa-google-plus-square iconsfb"></i>
+                </a>
+              </span>
+        </div>
+        <div class="col-lg-2 col-sm-6  mt-5 mb-5 ml-lg-0 text-center">
+          <h2>About Us</h2>
+          <ul class="footer-widget-list">
+          <li class="footerchild">
+          <a href="index.html" class="footerchild" ><span class="px-2">&#x2B9E;</span>Home</a>
+          </li>
+          <li class="footerchild">
+          <a href="about.html" class="footerchild"><span class=" px-2">&#x2B9E;</span>About Us</a>
+          </li>
+          <li class="footerchild">
+          <a href="privacy_policy.html" class="footerchild"><span class="px-2">&#x2B9E;</span>Privacy Policy</a>
+          </li>
+          <!-- <li class="footerchild">
+          <a href="terms_of_services.html" class="footerchild"><span class=" px-2">&#x2B9E;</span>Terms of Service</a>
+          </li> -->
+          <li class="footerchild">
+          <a href="contact.html" class="footerchild"><span class=" px-2">&#x2B9E;</span>Contact Us</a>
+          </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6 mt-5 mb-5 ml-lg-0 text-center">
+          <h2>Our Services</h2>
+          <ul class="footer-widget-list">
+          <!-- <li class="footerchild">
+          <a href="#" class="footerchild"><span class="px-2">&#x2B9E;</span>Bike Plans</a>
+          </li> -->
+          <li class="footerchild">
+          <a href="#" class="footerchild"><span class="px-2">&#x2B9E;</span>Finances Management</a>
+          </li>
+          <!-- <li class="footerchild">
+          <a href="#" class="footerchild"><span class="px-2">&#x2B9E;</span>Home Plans</a>
+          </li> -->
+          <li class="footerchild">
+          <a href="#" class="footerchild"><span class="px-2">&#x2B9E;</span>Health Plans</a>
+          </li>
+          <li class="footerchild">
+          <a href="#" class="footerchild"><span class="text-white px-2">&#x2B9E;</span>General Plans</a>
+          </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6 mt-5 mb-5 ml-lg-0 text-center">
+          <h2>Get In Touch</h2>
+          <ul class="footer-widget-list">
+          <li>
+          <a href="#" class="text-white"><span class="me-3">
+            <i class="fas fa-phone-volume iconsfb"></i>
+            <a href="tel:+918081182885" class="fs-6 contactInfo">+91 8081182885</a>
+          </span></a>
+          </li>
+          <li class="mt-3">
+            <a href="#" class="text-white"><span>
+              <i class="fas fa-envelope iconsfb"></i>
+              <a href="mailto:info@SportsKavach.com" class="fs-6 contactInfo">info@SportsKavach.com</a>
+            </span></a>
+            </li>
+
+          <li class="mt-3">
+              <a href="#" class="text-white"><span class="me-3">
+                <i class="fa-solid fa-location-dot iconsfb"></i>
+                <a href="tel:+918081182885" class="fs-6 contactInfo">ATS, Noida (U.P), India</a>
+              </span></a>
+             </li>
+          </ul>
+        </div>
+       </div>
+       <hr>
+       <!-- Last Footer -->
+       <div class="row mb-2">
+        <div class="container-fluid">
+          <span class="font-weight-bold text-center d-block" style="font-size: 1.5rem;">@SportsKavach 2024</span>
+        </div>
+       </div>
+      
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+
+  <script>
+    var menuIcon = document.getElementById('manuIcon');
+    menuIcon.addEventListener('click', function() {
+      // Toggle between the menu icon and the cross icon
+      if (menuIcon.classList.contains('fa-stream')) {
+        menuIcon.classList.remove('fa-stream');
+        menuIcon.classList.add('fa-times');
+      } else {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-stream');
+      }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentIndex = 0;
+      const cardContainer = document.querySelector('.card-container');
+      const cards = document.querySelectorAll('.card');
+      const cardCount = cards.length;
+      let visibleCards = 3;
+
+      // Adjust visible cards based on window width
+      const updateVisibleCards = () => {
+        if (window.innerWidth <= 768) {
+          visibleCards = 1;
+        } else if (window.innerWidth <= 1200) {
+          visibleCards = 2;
+        } else {
+          visibleCards = 3;
+        }
+        maxIndex = cardCount - visibleCards;
+        updateSlider();
+      };
+
+      const slideNext = () => {
+        if (currentIndex < maxIndex) {
+          currentIndex++;
+          updateSlider();
+        }
+      };
+
+      const slidePrev = () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateSlider();
+        }
+      };
+
+      const updateSlider = () => {
+        const slideWidth = cards[0].clientWidth;
+        cardContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      };
+
+      window.addEventListener('resize', updateVisibleCards);
+      updateVisibleCards();
+
+      window.slideNext = slideNext;
+      window.slidePrev = slidePrev;
+    });
+
+    let currentIndex = 0;
+    const cardContainer = document.querySelector('.card3-container');
+    const cards = document.querySelectorAll('.card3');
+    const cardCount = cards.length;
+    const visibleCards = 5;
+
+    function slideNext() {
+      currentIndex++;
+      updateSlider();
+      if (currentIndex >= cardCount / 2) {
+        resetSlider();
+      }
+    }
+
+    function updateSlider() {
+      const slideWidth = cards[0].clientWidth;
+      cardContainer.style.transition = 'transform 0.5s ease-in-out';
+      cardContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
+    function resetSlider() {
+      setTimeout(() => {
+        currentIndex = 0;
+        cardContainer.style.transition = 'none';
+        cardContainer.style.transform = 'translateX(0)';
+      }, 500);
+    }
+    setInterval(slideNext, 2000);
+  </script>
+  
+</html>

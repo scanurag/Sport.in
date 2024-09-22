@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sportskavach FAQS Page</title> 
+    <link rel="icon" type="image/x-icon" href="./images/sportslogo.png">
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .faq-section {
+          padding: 3rem 1rem;
+          background-color: #f8f9fa;
+      }
+      .faq-image-wrapper {
+          position: relative;
+      }
+      .faq-image {
+          max-width: 100%;
+          height: auto;
+      }
+      .faq-image-circle {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          width: 200px; /* Adjusted size */
+          height: 200px; /* Adjusted size */
+          border-radius: 50%;
+          border: 8px solid #fff;
+          z-index: 10;
+      }
+      .faq-header {
+          font-size: 2rem;
+          font-weight: bold;
+      }
+      .faq-question-box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          padding: 1rem;
+          margin-top: 1rem;
+          cursor: pointer;
+      }
+      .faq-question {
+          font-size: 1.2rem;
+          font-weight: bold;
+      }
+      .faq-answer {
+          font-size: 1rem;
+          margin-top: 0.5rem;
+          display: none; /* Initially hide the answers */
+          padding: 1rem;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          border-top: none;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .faq-icon {
+          font-size: 1.5rem;
+          transition: transform 0.3s ease;
+      }
+      .faq-icon.open {
+          transform: rotate(45deg);
+      }
+  </style>
+
+  </head>
+  <body>
+    <!-- Uppermost Navbar -->
+     <div class="row">
+      <div id="uppernavbar" class="w-100 d-flex flex-wrap align-items-center">
+        <div class="col-12 col-sm-3 text-center text-sm-left py-2">
+          <span>
+            <a href="https://www.facebook.com/" target="_blank">
+              <i class="fab fa-facebook iconsfb"></i>  
+            </a>
+          </span>
+          <span>
+            <a href="https://www.linkedin.com/company/sportkavach/" target="_blank">
+              <i class="fab fa-linkedin iconsfb"></i>
+            </a>
+          </span>
+          <span>
+            <a href="https://twitter.com/" target="_blank">
+              <i class="fab fa-twitter iconsfb"></i>
+            </a>
+          </span>
+          <span>
+            <a href="https://www.google.com/" target="_blank">
+              <i class="fab fa-google-plus-square iconsfb"></i>
+            </a>
+          </span>
+        </div>
+        <div class="col-12 col-sm-9 d-flex flex-wrap justify-content-center justify-content-sm-end text-center text-sm-left py-2">
+          <span class="me-3">
+            <i class="fas fa-phone-volume iconsfb"></i>
+            <a href="tel:+918081182885" class="fs-6 contactInfo">+91 8081182885</a>
+          </span>
+          <span>
+            <i class="fas fa-envelope iconsfb"></i>
+            <a href="mailto:info@sportskavach.com" class="fs-6 contactInfo">info@sportskavach.com</a>
+          </span>
+        </div>
+      </div> 
+     </div>
+    <!-- 2nd Navbar  -->
+     <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" class="text-white">
+          <img src="./images/logosports1.png" alt="Logo" class="logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- <span class="navbar-toggler-icon"></span>/ -->
+          <i class="fas fa-stream manueIcon" id="manuIcon"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./patner.html">Partner With Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./earn.html">Earn With Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./faqs.html">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <div class="navbar-nav ml-auto">
+            <button class="btn btn-success" style="background-color: #009c9d; border-color: #009c9d;">
+              <a href="./subscription.html" class="footerchild">Subscribe Now</a>
+            </button>
+          </div>
+          
+        </div>
+      </nav>
+     </div>
+     <!-- bannner of the faqs -->
+     <div class="banner">
+      <img src="./images/page/page-banner-3.webp" alt="about_banner" class="about_banner">
+    <div class="m-5">
+      <h1 class="font-weight-bold  text-center " style="font-size: 3rem;">FAQ's</h1>
+     <span class="font-weight-bold d-none d-sm-block" style="font-size: 1.5rem;">Your Questions, Answered – All About Sports Plans</span> 
+     <span class="font-weight-bold d-block d-sm-none" style="font-size: 1rem;">Your Questions, Answered – All About Sports Plans</span>
+    </div>
+    </div>
+    <!-- main section of the faqs -->
+     <div class="container-fluid">
+      <h4 style="color: #f76031;" class="text-center mt-3">FAQ'S</h4>
+      <div class="container faq-section bg-white  ">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="faq-image-wrapper">
+                    <img src="./images/faq-img-1.webp" alt="FAQ Image" class="faq-image">
+                    <img src="./images/faq-img-2.webp" alt="FAQ Image" class="faq-image-circle">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1 class="faq-header">Frequently Asked Questions</h1>
+  
+                <div class="faq-item">
+                    <div class="faq-question-box" onclick="toggleAnswer(1)">
+                        <span class="faq-question">1. why choose Sports kavach?</span>
+                        <span id="icon-1" class="faq-icon">=</span>
+                    </div>
+                    <div id="answer-1" class="faq-answer">Sports Kavach offers premium quality sports gear with innovative designs, trusted by professionals. We provide a wide range of affordable products, exceptional customer service, and sustainable practices. Join our community and experience top-notch performance and protection with Sports Kavach.</div>
+                </div>
+  
+                <div class="faq-item">
+                    <div class="faq-question-box" onclick="toggleAnswer(2)">
+                        <span class="faq-question">2. What Does Sports Kavach Medical Plans Cover?</span>
+                   
+                        <span id="icon-2" class="faq-icon">=</span>
+                    </div>
+                    <div id="answer-2" class="faq-answer">Sports Kavach Medical Plans covers a wide range of medical expenses including hospitalization, surgeries, consultations, diagnostic tests, and emergency treatments. Our comprehensive plans ensure that athletes receive the best medical care without financial strain, providing peace of mind and allowing them to focus on their performance.</div>
+                </div>
+  
+                <div class="faq-item">
+                    <div class="faq-question-box" onclick="toggleAnswer(3)">
+                        <span class="faq-question">3. How Do I File a Claim with Sports Kavach Medical Plans? </span>
+                        <span id="icon-3" class="faq-icon">=</span>
+                    </div>
+                    <div id="answer-3" class="faq-answer">Filing a claim with Sports Kavach Medical Plans is simple. You can submit your claim by calling us at 8081182885, emailing us at riyac3491@gmail.com, or messaging us on WhatsApp at 8081182885. Our customer support team is available to assist you throughout the process, ensuring a quick and hassle-free experience.</div>
+                </div>
+  
+                <div class="faq-item">
+                    <div class="faq-question-box" onclick="toggleAnswer(4)">
+                        <span class="faq-question">4. Can I Customize My Sports Kavach Medical Plans Plan?
+                        </span>
+                        <span id="icon-4" class="faq-icon">=</span>
+                    </div>
+                    <div id="answer-4" class="faq-answer">Yes, Sports Kavach Medical Plans offers customizable plans to meet your specific needs. You can tailor your coverage options to include additional benefits such as outpatient care, physiotherapy, and specialized treatments. For more details or to customize your plan, contact us at 8081182885, email info@sportskavachgmail.com, or WhatsApp 8081182885.</div>
+                </div>
+
+                <div class="faq-item">
+                  <div class="faq-question-box" onclick="toggleAnswer(5)">
+                      <span class="faq-question">5. What Makes Sports Kavach Different from Other Medical Plans Providers?
+                      </span>
+                      <span id="icon-5" class="faq-icon">=</span>
+                  </div>
+                  <div id="answer-5" class="faq-answer">
+                    Sports Kavach stands out due to our focus on Sports Person , offering tailored medical Plans solutions designed to meet your unique needs. With easy access to customer support via call, email (riyac3491@gmail.com), or WhatsApp (8081182885), competitive pricing, and comprehensive coverage options, we are committed to supporting your business's health and success.</div>
+              </div> 
+            </div>
+        </div>
+    </div>
+     </div>
+    
+
+      <!-- Footer section -->
+       <div class="row" id="footer">
+        <div class="col-lg-4 col-sm-6 mt-5 mb-5  text-center">
+           <img src="./images/footer-logo.png" class="" alt="">
+            <br>
+            <p class="footerchild">India's Premier
+              Healthcare Plan
+              for a Billion Indians
+              Unlock Your Gateway to Comprehensive Healthcare with SportsCover</p>
+              <span>
+                <a href="https://www.facebook.com/" target="_blank">
+                  <i class="fab fa-facebook iconsfb"></i>  
+                </a>
+              </span>
+              <span>
+                <a href="https://www.linkedin.com/" target="_blank">
+                  <i class="fab fa-linkedin iconsfb"></i>
+                </a>
+              </span>
+              <span>
+                <a href="https://twitter.com/" target="_blank">
+                  <i class="fab fa-twitter iconsfb"></i>
+                </a>
+              </span>
+              <span>
+                <a href="https://www.google.com/" target="_blank">
+                  <i class="fab fa-google-plus-square iconsfb"></i>
+                </a>
+              </span>
+        </div>
+        <div class="col-lg-2 col-sm-6  mt-5 mb-5 ml-lg-0 text-center">
+          <h2>About Us</h2>
+          <ul class="footer-widget-list">
+          <li class="footerchild">
+          <a href="index.html" class="footerchild" ><span class="px-2">&#x2B9E;</span>Home</a>
+          </li>
+          <li class="footerchild">
+          <a href="about.html" class="footerchild"><span class=" px-2">&#x2B9E;</span>About Us</a>
+          </li>
+          <li class="footerchild">
+          <a href="privacy_policy.html" class="footerchild"><span class="px-2">&#x2B9E;</span>Privacy Policy</a>
+          </li>
+          <!-- <li class="footerchild">
+          <a href="terms_of_services.html" class="footerchild"><span class=" px-2">&#x2B9E;</span>Terms of Service</a>
+          </li> -->
+          <li class="footerchild">
+          <a href="contact.html" class="footerchild"><span class=" px-2">&#x2B9E;</span>Contact Us</a>
+          </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6 mt-5 mb-5 ml-lg-0 text-center">
+          <h2>Our Services</h2>
+          <ul class="footer-widget-list">
+          <!-- <li class="footerchild">
+          <a href="#" class="footerchild"><span class="px-2">&#x2B9E;</span>Bike Plans</a>
+          </li> -->
+          <li class="footerchild">
+          <a href="#" class="footerchild"><span class="px-2">&#x2B9E;</span>Finances Management</a>
+          </li>
+          <!-- <li class="footerchild">
+          <a href="#" class="footerchild"><span class="px-2">&#x2B9E;</span>Home Plans</a>
+          </li> -->
+          <li class="footerchild">
+          <a href="#" class="footerchild"><span class="px-2">&#x2B9E;</span>Health Plans</a>
+          </li>
+          <li class="footerchild">
+          <a href="#" class="footerchild"><span class="text-white px-2">&#x2B9E;</span>General Plans</a>
+          </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6 mt-5 mb-5 ml-lg-0 text-center">
+          <h2>Get In Touch</h2>
+          <ul class="footer-widget-list">
+          <li>
+          <a href="#" class="text-white"><span class="me-3">
+            <i class="fas fa-phone-volume iconsfb"></i>
+            <a href="tel:+918081182885" class="fs-6 contactInfo">+91 8081182885</a>
+          </span></a>
+          </li>
+          <li class="mt-3">
+            <a href="#" class="text-white"><span>
+              <i class="fas fa-envelope iconsfb"></i>
+              <a href="mailto:info@sportskavach.com" class="fs-6 contactInfo">info@sportskavach.com</a>
+            </span></a>
+            </li>
+
+          <li class="mt-3">
+              <a href="#" class="text-white"><span class="me-3">
+                <i class="fa-solid fa-location-dot iconsfb"></i>
+                <a href="tel:+918081182885" class="fs-6 contactInfo">ATS, Noida (U.P), India</a>
+              </span></a>
+             </li>
+          </ul>
+        </div>
+       </div>
+
+       <hr>
+       <!-- Last Footer -->
+       <div class="row mb-2">
+        <div class="container-fluid">
+          <span class="font-weight-bold text-center d-block" style="font-size: 1.5rem;">@sportskavach 2024</span>
+        </div>
+       </div>
+      
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      function toggleAnswer(answerId) {
+          var answer = document.getElementById('answer-' + answerId);
+          var icon = document.getElementById('icon-' + answerId);
+          if (answer.style.display === 'none' || answer.style.display === '') {
+              answer.style.display = 'block';
+              icon.textContent = '-';
+              icon.classList.add('open');
+          } else {
+              answer.style.display = 'none';
+              icon.textContent = '=';
+              icon.classList.remove('open');
+          }
+      }
+  </script>
+  </body>
+
+  <script>
+    var menuIcon = document.getElementById('manuIcon');
+  
+    menuIcon.addEventListener('click', function() {
+      // Toggle between the menu icon and the cross icon
+      if (menuIcon.classList.contains('fa-stream')) {
+        menuIcon.classList.remove('fa-stream');
+        menuIcon.classList.add('fa-times');
+      } else {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-stream');
+      }
+    });
+  </script>
+  
+</html>

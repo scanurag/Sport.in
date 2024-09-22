@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Application Form</title> 
+    <link rel="icon" type="image/x-icon" href="./images/sportslogo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+      body {
+      font-family: 'Roboto', sans-serif;
+      background: url('./images/buyformbg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-position: fixed;
+    }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-2xl mx-auto mt-10 p-8 bg-white shadow-lg rounded-lg">
+        <h2 class="text-3xl font-bold mb-6 text-center text-indigo-600"> Application Form</h2>
+        <form action="#" method="POST">
+            <div class="mb-4">
+                <label for="fullName" class="block text-lg font-medium text-gray-700">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" class="mt-1 block w-full p-3 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="John Doe" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-lg font-medium text-gray-700">Email:</label>
+                <input type="email" id="email" name="email" class="mt-1 block w-full p-3 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="john.doe@example.com" required>
+            </div>
+            <div class="mb-4">
+                <label for="phoneNumber" class="block text-lg font-medium text-gray-700">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" class="mt-1 block w-full p-3 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="123-456-7890" required>
+            </div>
+            <div class="mb-4">
+                <label for="dateOfBirth" class="block text-lg font-medium text-gray-700">Date of Birth:</label>
+                <input type="date" id="dateOfBirth" name="dateOfBirth" class="mt-1 block w-full p-3 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
+            </div>
+            <div class="mb-4">
+                <label for="address" class="block text-lg font-medium text-gray-700">Address:</label>
+                <textarea id="address" name="address" class="mt-1 block w-full p-3 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" rows="3" placeholder="1234 Main St, Springfield, IL" required></textarea>
+            </div>
+            
+            <h2 class="text-2xl font-bold mt-8 mb-6 text-indigo-600">Application Details</h2>
+            <div class="mb-4">
+                <label for="sport" class="block text-lg font-medium text-gray-700">Sport:</label>
+                <input type="text" id="sport" name="sport" class="mt-1 block w-full p-3 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="e.g., Basketball" required>
+            </div>
+            <div class="mb-4">
+                <label for="plan" class="block text-lg font-medium text-gray-700">Choose Plan:</label>
+                <select id="plan" name="plan" class="mt-1 block w-full p-3 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
+                    <option value="basic">Basic Plan</option>
+                    <option value="standard">Standard Plan</option>
+                    <option value="premium">Premium Plan</option>
+                </select>
+            </div>
+            <!-- <div class="mb-4">
+                <label for="policyDuration" class="block text-lg font-medium text-gray-700">Policy Duration (months):</label>
+                <input type="number" id="policyDuration" name="policyDuration" class="mt-1 block w-full p-3 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
+            </div>
+            <div class="mb-4">
+                <label for="finalAmount" class="block text-lg font-medium text-gray-700">Final Amount:</label>
+                <input type="number" id="finalAmount" name="finalAmount" class="mt-1 block w-full p-3 rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
+            </div> -->
+            <div class="mt-6">
+                <button type="button" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" onclick="window.location.href='home.html'">
+                    Submit Application
+                </button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>

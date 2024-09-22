@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore 3</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS for styling -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: url('./images/canva\ bg.png') no-repeat center center fixed;
+      background-size: cover;
+      background-position: fixed;
+      background-color: #017676;
+    }
+
+    .card {
+      margin-bottom: 20px;
+      margin-top: 50px;
+      opacity: 0;
+      transform: translateX(-100%);
+      animation: slideIn 1s forwards;
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .btn-primary {
+      background-color: rgba(0, 123, 255, 0.7);
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: rgba(0, 123, 255, 0.9);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title text-center"><u>Premium Plan</u></h4>
+          <h5 class="card-title text-center"><u>For Family</u></h5>
+          <p class="card-text text-center"><b>Our Premium Plan offers the best features and highest level of service. Enjoy a seamless experience with top-notch support and advanced tools.</b></p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">• Interest-Free Hospitalization Loan</li>
+            <li class="list-group-item">• Financial support for Hospiitalization Costs</li>
+            <li class="list-group-item">• Free In-Person Consultations & OPD Visits <B>(max 4 Visits)</B></li>
+            <li class="list-group-item">• Free Annual Health Checkup Covering Upto 70 Parameteres</li>
+            <li class="list-group-item">• Free In-Person Orthopedic Consultations </li>
+            <li class="list-group-item">• Free Mental Health Consulatation with Psychiatrist</li>
+            <li class="list-group-item">• Free Nutritional Guidance by a Dietician</li>
+            <li class="list-group-item">• Physio Care</li>
+            <li class="list-group-item">• Upto 35% Discounts on Medication at Pharamacies</li>
+            <li class="list-group-item">• Upto 40% Discounts on Labrotary Tests and Imaging Scans</li>
+          </ul>
+          <div class="text-center mt-3">
+            <a href="./buyform.html" class="btn btn-primary">Buy Plan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sportskavach About Page</title> 
+    <link rel="icon" type="image/x-icon" href="./images/sportslogo.png">
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <style>
+    .content-section {
+        padding: 2rem 1rem;
+        background-color: #f8f9fa;
+    }
+    .content-header {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: orange;
+    }
+    .icon {
+        color: rgb(77, 128, 0);
+        margin-right: 0.5rem;
+    }
+    .icon-list-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+    .call-section {
+        margin-top: 1rem;
+        padding: 1rem;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .call-section .phone-icon {
+        color: green;
+        margin-right: 0.5rem;
+    }
+
+    /* second section */ 
+
+    .banner1 {
+            background-color: #02acac; /* Change this to the desired background color */
+            color: #fff; /* Ensure the text is visible on the background */
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .stat-item {
+            margin: 1rem 0;
+        }
+        .stat-item .icon {
+            color: #fff; /* Ensure icons are visible on the background */
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+        .stat-item .value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: orange;
+        }
+        .stat-item .label {
+            font-size: 1rem;
+            color: #fff; /* Ensure labels are visible on the background */
+        }
+
+      .card {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background-color: #02acac;
+      transition: height 0.9s;
+      z-index: 0;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .card:hover::before {
+      height: 100%;
+    }
+    .card-body {
+      position: relative;
+      z-index: 1;
+    }
+    .card-icon {
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-title {
+      transition: color 0.3s;
+    }
+    .card:hover .card-title {
+      color: white;
+    }
+
+
+
+</style>
+  <body>
+    <!-- Uppermost Navbar -->
+     <div class="row">
+      <div id="uppernavbar" class="w-100 d-flex flex-wrap align-items-center">
+        <div class="col-12 col-sm-3 text-center text-sm-left py-2">
+          <span>
+            <a href="https://www.facebook.com/" target="_blank">
+              <i class="fab fa-facebook iconsfb"></i>  
+            </a>
+          </span>
+          <span>
+            <a href="https://www.linkedin.com/company/sportkavach/" target="_blank">
+              <i class="fab fa-linkedin iconsfb"></i>
+            </a>
+          </span>
+          <span>
+            <a href="https://twitter.com/" target="_blank">
+              <i class="fab fa-twitter iconsfb"></i>
+            </a>
+          </span>
+          <span>
+            <a href="https://www.google.com/" target="_blank">
+              <i class="fab fa-google-plus-square iconsfb"></i>
+            </a>
+          </span>
+        </div>
+        <div class="col-12 col-sm-9 d-flex flex-wrap justify-content-center justify-content-sm-end text-center text-sm-left py-2">
+          <span class="me-3">
+            <i class="fas fa-phone-volume iconsfb"></i>
+            <a href="tel:+918081182885" class="fs-6 contactInfo">+91 8081182885</a>
+          </span>
+          <span>
+            <i class="fas fa-envelope iconsfb"></i>
+            <a href="mailto:info@sportskavach.com" class="fs-6 contactInfo">info@sportskavach.com</a>
+          </span>
+        </div>
+      </div> 
+     </div>
+    <!-- 2nd Navbar  -->
+     <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" class="text-white">
+          <img src="./images/logosports1.png" alt="Logo" class="logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- <span class="navbar-toggler-icon"></span>/ -->
+          <i class="fas fa-stream manueIcon" id="manuIcon"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./patner.html">Partner With Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./earn.html">Earn With Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./faqs.html">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <div class="navbar-nav ml-auto">
+            <button class="btn btn-success" style="background-color: #009c9d; border-color: #009c9d;">
+              <a href="./subscription.html" class="footerchild">Subscribe Now</a>
+            </button>
+          </div>
+          
+        </div>
+      </nav>
+     </div>
+     <!-- About banner Area  -->
+    <div class="banner">
+      <img src="./images/page/about-page-banner.webp" alt="about_banner" class="about_banner">
+    <div class="m-5">
+      <h1 class="font-weight-bold  text-center " style="font-size: 3rem;">About Us</h1>
+     <span class="font-weight-bold d-none d-sm-block" style="font-size: 1.5rem;">Protecting Athletes, Ensuring Futures – Your Sports Plans Ally</span> 
+     <span class="font-weight-bold d-block d-sm-none" style="font-size: 1rem;">Protecting Athletes, Ensuring Futures – Your Sports Plans Ally</span>
+    </div>
+    </div>
+
+    <!-- About Our Company -->
+    <div class="container bg-white content-section">
+      <div class="row">
+        <div class="col-lg-6 d-flex justify-content-center align-items-center">
+          <img src="./images/about/about-1.webp" alt="Company Image" class="img-fluid">
+      </div>
+          <div class="col-lg-6 mt-1">
+              <h1 class="content-header text-center">About Our Company</h1>
+              <span class="font-weight-bold d-none d-sm-block text-center" style="font-size: 2rem;">Plans Always Ready To Protect Your Life & Business</span> 
+              <span class="font-weight-bold d-block d-sm-none text-center" style="font-size: 1rem;">Plans Always Ready To Protect Your Life & Business</span> 
+              <p>SportsCover is a subscription-based healthcare plan launched by SportsCover, a Delhi-based healthcare company. Members will get free OPDs, free full body health check up discount on medicines, and pre-approved loan up to 15 lakhs.</p>
+              
+              <div class="icon-list-item">
+                  <i class="fa-solid fa-share-from-square icon"></i>
+                  <span>Cashless OPD Consultations across 10,600+ hospitals</span>
+              </div>
+              <div class="icon-list-item">   
+                  <i class="fa-solid fa-share-from-square icon"></i>
+                  <span>7 day personalized on-call support available.</span>
+              </div>   
+              <div class="icon-list-item">
+                   <i class="fa-solid fa-share-from-square icon"></i>
+                  <span>Free full body health, diet, eye and mental health checkups.</span>
+              </div>
+              <div class="call-section">
+                  <div class="icon-list-item">
+                      <span class="phone-icon">&#9742;</span>
+                      <span>Call To Our Experts</span>
+                  </div>
+                  <a href="tel:+918081182885">+91 8081182885</a>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Mid Banner -->
+    <div class="container-fluid banner1">
+      <div class="row">
+          <div class="col-md-3 col-sm-6 stat-item">
+              <div class="icon"><i class="fa-solid fa-shield-alt"></i></div>
+              <div class="value odometer" id="Planss" data-count="89">0</div>
+              <div class="label">Gave Planss</div>
+          </div>
+          <div class="col-md-3 col-sm-6 stat-item">
+              <div class="icon"><i class="fa-solid fa-users"></i></div>
+              <div class="value odometer" id="experience" data-count="1120">0</div>
+              <div class="label">Experience Members</div>
+          </div>
+          <div class="col-md-3 col-sm-6 stat-item">
+              <div class="icon"><i class="fa-solid fa-smile"></i></div>
+              <div class="value odometer" id="customers" data-count="1900">0</div>
+              <div class="label">Satisfied Customers</div>
+          </div>
+          <div class="col-md-3 col-sm-6 stat-item">
+              <div class="icon"><i class="fa-solid fa-trophy"></i></div>
+              <div class="value odometer" id="awards" data-count="50">0</div>
+              <div class="label">Awards Win</div>
+          </div>
+      </div>
+  </div>
+   <!-- Key Features -->
+    <div class="container bg-white content-section">
+      <div class="row">
+          <div class="col-lg-6 d-flex justify-content-center align-items-center">
+              <img src="./images/recruitment-1.webp" alt="Company Image" class="img-fluid">
+          </div>
+          <div class="col-lg-6 ">
+            <h1 class="content-header text-center mt-2">Key Features</h1>
+              <h1>Pre-approved low cost loan </h1>
+              <h1>What is included?</h1>
+
+              <div class="icon-list-item">
+                  <i class="fa-solid fa-share-from-square icon"></i>
+                  <span>Plan activation in 45 days with no medical test</span>
+              </div>
+              <div class="icon-list-item">   
+                  <i class="fa-solid fa-share-from-square icon"></i>
+                  <span>Consumables and extra monitory charges are included</span>
+              </div>   
+              <div class="icon-list-item">
+                   <i class="fa-solid fa-share-from-square icon"></i>
+                  <span>Cashless treatments across 10,600 Hospitals
+                  </span>
+              </div>
+              <div class="icon-list-item">
+                  <i class="fa-solid fa-share-from-square icon"></i>
+                 <span>527 day-care procedures included
+                 </span>
+             </div>
+
+             <div class="icon-list-item">
+              <i class="fa-solid fa-share-from-square icon"></i>
+             <span>General physicians & Orthopedic physician in person consultations
+             </span>
+         </div>
+         <div class="icon-list-item">
+          <i class="fa-solid fa-share-from-square icon"></i>
+         <span>Book directly from SportsCover on cashless basis
+         </span>
+     </div>
+     <div class="icon-list-item">
+      <i class="fa-solid fa-share-from-square icon"></i>
+     <span>Up to 35% discount available on in-store and home delivery
+     </span>
+ </div>
+ <div class="icon-list-item">
+  <i class="fa-solid fa-share-from-square icon"></i>
+ <span>Prescription from any doctor is eligible for discount
+ </span>
+</div>
+<div class="icon-list-item">
+  <i class="fa-solid fa-share-from-square icon"></i>
+ <span>Annual Health Check-up (up to 70 parameters) for all adults
+ </span>
+</div>
+<div class="icon-list-item">
+  <i class="fa-solid fa-share-from-square icon"></i>
+ <span>Up to 40% off on lab tests and scans
+ </span>
+</div>
+              <div class="call-section">
+                  <div class="icon-list-item">
+                      <i class="fa-solid fa-phone phone-icon"></i>
+                      <span>Call To Our Experts</span>
+                  </div>
+                  <a href="tel:+918081182885">+91 8081182885</a>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Our Services -->
+    <div class="container-fluid">
+      <h4 style="color: #f76031;" class="text-center mt-3">Our Services</h4>
+     <div class="container-fluid">
+    <span class="font-weight-bold d-none d-sm-block text-center" style="font-size: 3rem;">SportsKavach Best Plans Services</span> 
+    <span class="font-weight-bold d-block d-sm-none text-center" style="font-size: 1rem;">SportsKavach Best Plans Services</span>
+   </div>
+   </div>
+    <div class="container my-5">
+      <div class="row">
+        <!-- First Row of Cards -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body d-flex align-items-center">
+              <div class="card-icon">
+                <img src="./images/services/couple.svg" alt="Card Icon">
+              </div>
+              <div>
+                <h5 class="card-title">Plans</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body d-flex align-items-center">
+              <div class="card-icon">
+                <img src="./images/services/home.svg" alt="Card Icon">
+              </div>
+              <div>
+                <h5 class="card-title">Comprehensive Coverage</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body d-flex align-items-center">
+              <div class="card-icon">
+                <img src="./images/services/lightbulb.svg" alt="Card Icon">
+              </div>
+              <div>
+                <h5 class="card-title">No cost loans</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Second Row of Cards -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body d-flex align-items-center">
+              <div class="card-icon">
+                <img src="./images/services/heart.svg" alt="Card Icon">
+              </div>
+              <div>
+                <h5 class="card-title">Health Support</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body d-flex align-items-center">
+              <div class="card-icon">
+                <img src="./images/services/car.svg" alt="Card Icon">
+              </div>
+              <div>
+                <h5 class="card-title">Extensive Health Coverage</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body d-flex align-items-center">
+              <div class="card-icon">
+                <img src="./images/services/services-icon-1.svg" alt="Card Icon">
+              </div>
+              <div>
+                <h5 class="card-title">Personalized Assistance</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+     
+      <!-- Footer section -->
+       <div class="row" id="footer">
+        <div class="col-lg-4 col-sm-6 mt-5 mb-5  text-center">
+           <img src="./images/footer-logo.png" class="" alt="">
+            <br>
+            <p class="footerchild">India's Premier
+              Healthcare Plan
+              for a Billion Indians
+              Unlock Your Gateway to Comprehensive Healthcare with SportsCover</p>
+              <span>
+                <a href="https://www.facebook.com/" target="_blank">
+                  <i class="fab fa-facebook iconsfb"></i>  
+                </a>
+              </span>
+              <span>
+                <a href="https://www.linkedin.com/" target="_blank">
+                  <i class="fab fa-linkedin iconsfb"></i>
+                </a>
+              </span>
+              <span>
+                <a href="https://twitter.com/" target="_blank">
+                  <i class="fab fa-twitter iconsfb"></i>
+                </a>
+              </span>
+              <span>
+                <a href="https://www.google.com/" target="_blank">
+                  <i class="fab fa-google-plus-square iconsfb"></i>
+                </a>
+              </span>
+        </div>
+        <div class="col-lg-2 col-sm-6  mt-5 mb-5 ml-lg-0 text-center">
+          <h2>About Us</h2>
+          <ul class="footer-widget-list">
+          <li class="footerchild">
+          <a href="index.html" class="footerchild" ><span class="px-2">&#x2B9E;</span>Home</a>
+          </li>
+          <li class="footerchild">
+          <a href="about.html" class="footerchild"><span class=" px-2">&#x2B9E;</span>About Us</a>
+          </li>
+          <li class="footerchild">
+          <a href="privacy_policy.html" class="footerchild"><span class="px-2">&#x2B9E;</span>Privacy Policy</a>
+          </li>
+          <!-- <li class="footerchild">
+          <a href="terms_of_services.html" class="footerchild"><span class=" px-2">&#x2B9E;</span>Terms of Service</a>
+          </li> -->
+          <li class="footerchild">
+          <a href="contact.html" class="footerchild"><span class=" px-2">&#x2B9E;</span>Contact Us</a>
+          </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6 mt-5 mb-5 ml-lg-0 text-center">
+          <h2>Our Services</h2>
+          <ul class="footer-widget-list">
+          <!-- <li class="footerchild">
+          <a href="#" class="footerchild"><span class="px-2">&#x2B9E;</span>Bike Plans</a>
+          </li> -->
+          <li class="footerchild">
+          <a href="#" class="footerchild"><span class="px-2">&#x2B9E;</span>Finances Management</a>
+          </li>
+          <!-- <li class="footerchild">
+          <a href="#" class="footerchild"><span class="px-2">&#x2B9E;</span>Home Plans</a>
+          </li> -->
+          <li class="footerchild">
+          <a href="#" class="footerchild"><span class="px-2">&#x2B9E;</span>Health Plans</a>
+          </li>
+          <li class="footerchild">
+          <a href="#" class="footerchild"><span class="text-white px-2">&#x2B9E;</span>General Plans</a>
+          </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6 mt-5 mb-5 ml-lg-0 text-center">
+          <h2>Get In Touch</h2>
+          <ul class="footer-widget-list">
+          <li>
+          <a href="#" class="text-white"><span class="me-3">
+            <i class="fas fa-phone-volume iconsfb"></i>
+            <a href="tel:+918081182885" class="fs-6 contactInfo">+91 8081182885</a>
+          </span></a>
+          </li>
+          <li class="mt-3">
+            <a href="#" class="text-white"><span>
+              <i class="fas fa-envelope iconsfb"></i>
+              <a href="mailto:info@sportskavach.com" class="fs-6 contactInfo">info@sportskavach.com</a>
+            </span></a>
+            </li>
+
+          <li class="mt-3">
+              <a href="#" class="text-white"><span class="me-3">
+                <i class="fa-solid fa-location-dot iconsfb"></i>
+                <a href="tel:+918081182885" class="fs-6 contactInfo">ATS, Noida (U.P), India</a>
+              </span></a>
+             </li>
+          </ul>
+        </div>
+       </div>
+
+       <hr>
+       <!-- Last Footer -->
+       <div class="row mb-2">
+        <div class="container-fluid">
+          <span class="font-weight-bold text-center d-block" style="font-size: 1.5rem;">@sportskavach 2024</span>
+        </div>
+       </div>
+      
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+
+  <script>
+
+$(document).ready(function(){
+            setTimeout(function(){
+                $('#Planss').html($('#Planss').data('count'));
+                $('#experience').html($('#experience').data('count'));
+                $('#customers').html($('#customers').data('count'));
+                $('#awards').html($('#awards').data('count'));
+            }, 1000);
+        });
+
+    var menuIcon = document.getElementById('manuIcon');
+  
+    menuIcon.addEventListener('click', function() {
+      // Toggle between the menu icon and the cross icon
+      if (menuIcon.classList.contains('fa-stream')) {
+        menuIcon.classList.remove('fa-stream');
+        menuIcon.classList.add('fa-times');
+      } else {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-stream');
+      }
+    });
+
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
+  
+  
+</html>
